@@ -1,4 +1,3 @@
-# Commit 02: chore: remove default template files
 
 bash
 rm src/App.css
