@@ -1,9 +1,7 @@
 # Commit 01: chore: scaffold Vite + React project
 
-Replace these files in the project root (they match the ones you uploaded).
-
 **package.json**
-```json
+json
 {
   "name": "courier-tracker",
   "private": true,
@@ -23,7 +21,6 @@ Replace these files in the project root (they match the ones you uploaded).
     "vite": "^5.4.0"
   }
 }
-```
 
 **vite.config.js**
 ```js
@@ -33,7 +30,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
 });
-```
 
 **index.html**
 ```html
@@ -49,18 +45,15 @@ export default defineConfig({
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-```
 
-**.gitignore** (keep the one Vite created, and make sure it has this)
-```
+**.gitignore** 
+
 node_modules
 dist
 .DS_Store
-```
 
 Run `npm install`, then commit:
 
-```bash
+bash
 git add package.json vite.config.js index.html .gitignore
 git commit -m "chore: scaffold Vite + React project"
-```
