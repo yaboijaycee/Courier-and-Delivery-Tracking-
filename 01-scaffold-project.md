@@ -23,7 +23,7 @@ json
 }
 
 **vite.config.js**
-```js
+js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -32,7 +32,7 @@ export default defineConfig({
 });
 
 **index.html**
-```html
+html
 <!doctype html>
 <html lang="en">
   <head>
