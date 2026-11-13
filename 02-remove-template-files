@@ -1,19 +1,14 @@
 # Commit 02: chore: remove default template files
 
-Delete the boilerplate that Vite's template created:
-
-```bash
+bash
 rm src/App.css
 rm -r src/assets
 rm src/index.css
 rm src/App.jsx src/main.jsx
-```
 
-(We write our own `App.jsx` and `main.jsx` in commit 14.)
 
 Commit:
 
-```bash
+bash
 git add -A
 git commit -m "chore: remove default template files"
-```
