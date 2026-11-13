@@ -5,9 +5,6 @@ rm -r src/assets
 rm src/index.css
 rm src/App.jsx src/main.jsx
 
-
-Commit:
-
 bash
 git add -A
 git commit -m "chore: remove default template files"
