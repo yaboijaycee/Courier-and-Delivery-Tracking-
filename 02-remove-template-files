@@ -1,11 +1,17 @@
-02-remove-template-files
+# Commit 02: chore: remove default template files
 
-bash
+```bash
 rm src/App.css
 rm -r src/assets
 rm src/index.css
 rm src/App.jsx src/main.jsx
+```
 
-bash
+(We write our own `App.jsx` and `main.jsx` in commit 14.)
+
+Commit:
+
+```bash
 git add -A
 git commit -m "chore: remove default template files"
+```
