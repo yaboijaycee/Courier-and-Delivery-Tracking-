@@ -1,0 +1,77 @@
+# Commit 14: feat: add app layout and shipment selection
+
+From here you can run `npm run dev` and see the app.
+
+Create **src/main.jsx**:
+
+```jsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./styles.css";
+
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+Create **src/App.jsx** (first version: sample data, click to select; the detail's buttons do nothing yet):
+
+```jsx
+import { useState } from "react";
+import { seedShipments } from "./data.js";
+import ShipmentList from "./components/ShipmentList.jsx";
+import ShipmentDetail from "./components/ShipmentDetail.jsx";
+
+export default function App() {
+  const [shipments] = useState(seedShipments);
+  const [selectedId, setSelectedId] = useState(shipments[0]?.id ?? null);
+
+  const selected = shipments.find((s) => s.id === selectedId);
+
+  return (
+    <div className="app">
+      <header className="topbar">
+        <h1>📦 Courier Tracker</h1>
+      </header>
+
+      <main className="layout">
+        <aside className="panel">
+          <ShipmentList shipments={shipments} selectedId={selectedId} onSelect={setSelectedId} />
+        </aside>
+        <section className="panel">
+          {selected ? (
+            <ShipmentDetail
+              key={selected.id}
+              shipment={selected}
+              onAddEvent={() => {}}
+              onDelete={() => {}}
+            />
+          ) : (
+            <p className="empty">Select a shipment to see details.</p>
+          )}
+        </section>
+      </main>
+    </div>
+  );
+}
+```
+
+**Append** to `src/styles.css`:
+
+```css
+.layout { display: grid; grid-template-columns: 340px 1fr; gap: 16px; align-items: start; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+.panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.search { width: 100%; margin-bottom: 12px; }
+.empty { color: var(--muted); text-align: center; padding: 24px 0; }
+```
+
+Commit:
+
+```bash
+git add src/main.jsx src/App.jsx src/styles.css
+git commit -m "feat: add app layout and shipment selection"
+```
