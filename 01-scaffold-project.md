@@ -1,7 +1,7 @@
 # Commit 01: chore: scaffold Vite + React project
 
 **package.json**
-json
+```json
 {
   "name": "courier-tracker",
   "private": true,
@@ -21,18 +21,20 @@ json
     "vite": "^5.4.0"
   }
 }
+```
 
 **vite.config.js**
-js
+```js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
 });
+```
 
 **index.html**
-html
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,15 +47,19 @@ html
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+```
 
-**.gitignore** 
-
+**.gitignore** (keep the one Vite created, and make sure it has this)
+```
 node_modules
 dist
 .DS_Store
+```
 
 Run `npm install`, then commit:
 
-bash
+```bash
 git add package.json vite.config.js index.html .gitignore
 git commit -m "chore: scaffold Vite + React project"
+```
+
