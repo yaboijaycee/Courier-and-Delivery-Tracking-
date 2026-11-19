@@ -1,6 +1,6 @@
 # Commit 12: feat: add status update form
 
-**Replace** **src/components/ShipmentDetail.jsx** with the final version:
+**Replace** **src/components/ShipmentDetail.jsx** 
 
 ```jsx
 import { useState } from "react";
@@ -100,3 +100,4 @@ Commit:
 git add src/components/ShipmentDetail.jsx src/styles.css
 git commit -m "feat: add status update form"
 ```
+
